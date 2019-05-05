@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    h1.header Swarm clicker
+    h1.header Swarm clicker //# Comment
     .cards
       Card(v-for="person in people"
         :key="person.id"

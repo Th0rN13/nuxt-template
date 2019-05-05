@@ -13,7 +13,20 @@ export default {
   },
   loading: { color: "#3B8070" },
   css: ["~/assets/css/main.css"],
-  build: {},
+  build: {
+    extend (config, { isDev, isClient}) {
+      config.module.rules.push({
+        test: /\.(vue)$/,
+        exclude: /(node_modules)/,
+        loader: 'string-replace-loader',
+        options: {
+          search: '\/\/#.*$',
+          flags: 'gm',
+          replace: '',
+        }
+      });
+    }
+  },
   modules: [
     "@nuxtjs/axios",
   ],
