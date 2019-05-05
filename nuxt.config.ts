@@ -14,7 +14,7 @@ export default {
   loading: { color: "#3B8070" },
   css: ["~/assets/css/main.css"],
   build: {
-    extend (config, { isDev, isClient}) {
+    extend (config, { isDev, isClient, isServer}) {
       config.module.rules.push({
         test: /\.(vue)$/,
         exclude: /(node_modules)/,
