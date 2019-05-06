@@ -16,7 +16,7 @@ export default {
   build: {
     extend (config, { isDev, isClient, isServer}) {
       config.module.rules.push({
-        test: /\.(vue)$/,
+        test: /\.(vue|pug)$/,
         exclude: /(node_modules)/,
         loader: 'string-replace-loader',
         options: {
